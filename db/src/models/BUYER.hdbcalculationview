@@ -54,6 +54,7 @@
       <viewAttribute id="BUILDING"/>
       <viewAttribute id="CITY"/>
       <viewAttribute id="COMPANYNAME"/>
+      <viewAttribute id="COUNTRY_CODE"/>
       <viewAttribute id="EMAIL"/>
       <viewAttribute id="LEGALFORM"/>
       <viewAttribute id="ID"/>
@@ -78,6 +79,7 @@
       <mapping xsi:type="Calculation:AttributeMapping" target="POSTALCODE" source="POSTALCODE"/>
       <mapping xsi:type="Calculation:AttributeMapping" target="REGION" source="REGION"/>
       <mapping xsi:type="Calculation:AttributeMapping" target="STREET" source="STREET"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="COUNTRY_CODE" source="COUNTRY_CODE"/>
       <mapping xsi:type="Calculation:AttributeMapping" target="JOIN$ADDRESS_ID$ID" source="ID"/>
     </input>
     <joinAttribute name="JOIN$ADDRESS_ID$ID"/>
@@ -97,34 +99,38 @@
       <descriptions defaultDescription="COMPANYNAME"/>
       <keyMapping columnObjectName="Join_1" columnName="COMPANYNAME"/>
     </attribute>
-    <attribute id="EMAIL" order="4" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="COUNTRY_CODE" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="COUNTRY_CODE"/>
+      <keyMapping columnObjectName="Join_1" columnName="COUNTRY_CODE"/>
+    </attribute>
+    <attribute id="EMAIL" order="5" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="EMAIL"/>
       <keyMapping columnObjectName="Join_1" columnName="EMAIL"/>
     </attribute>
-    <attribute id="LEGALFORM" order="5" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="LEGALFORM" order="6" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="LEGALFORM"/>
       <keyMapping columnObjectName="Join_1" columnName="LEGALFORM"/>
     </attribute>
-    <attribute id="ID" order="6" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="ID" order="7" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="ID"/>
       <keyMapping columnObjectName="Join_1" columnName="ID"/>
     </attribute>
-    <attribute id="POSTALCODE" order="8" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="POSTALCODE" order="9" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="POSTALCODE"/>
       <keyMapping columnObjectName="Join_1" columnName="POSTALCODE"/>
     </attribute>
-    <attribute id="REGION" order="9" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="REGION" order="10" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="REGION"/>
       <keyMapping columnObjectName="Join_1" columnName="REGION"/>
     </attribute>
-    <attribute id="STREET" order="10" displayAttribute="false" attributeHierarchyActive="false">
+    <attribute id="STREET" order="11" displayAttribute="false" attributeHierarchyActive="false">
       <descriptions defaultDescription="STREET"/>
       <keyMapping columnObjectName="Join_1" columnName="STREET"/>
     </attribute>
   </attributes>
   <calculatedAttributes/>
   <baseMeasures>
-    <measure id="PARTNERROLE" order="7" aggregationType="sum" measureType="simple">
+    <measure id="PARTNERROLE" order="8" aggregationType="sum" measureType="simple">
       <descriptions defaultDescription="PARTNERROLE"/>
       <measureMapping columnObjectName="Join_1" columnName="PARTNERROLE"/>
     </measure>
